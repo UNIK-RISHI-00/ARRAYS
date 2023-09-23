@@ -1,0 +1,54 @@
+#include<stdio.h>
+int main()
+{
+
+    //TRANSVERSE 
+    int arr[30];
+    int size;
+    printf("ENTER THE SIZE OF ARRAY: ");
+    scanf("%d",&size);
+    if(size>30)
+    {
+        printf("ARRAY OVERFLOW OCCURS");
+    }
+    else
+    {
+    for(int i=0;i<size;i++)
+    {
+         printf("ELEMENT AT INDEX %d :",i);
+         scanf("%d",&arr[i]);
+    }
+    printf("\n");
+    printf("ELEMENTS OF ARRAY ARE: ");
+    printf("\n");
+
+
+    for(int i=0;i<size;i++)
+    {
+         printf("ELEMENT AT INDEXT %d :",i);
+         printf("%d \n",arr[i]);
+
+    }
+    }
+
+    //DELETION AT SPECIFIC POSITION
+    printf("ENTER THE POSITION YOU WANT TO DELETE DATA: ");
+    int pos;
+    scanf("%d",&pos);
+    for(int i=pos-1;i<size-1;i++)
+    {
+        arr[i]=arr[i+1];
+    }
+    size--;
+
+    for(int i=0;i<size;i++)
+    {
+         printf("ELEMENT AT INDEXT %d :",i);
+         printf("%d \n",arr[i]);
+
+    }
+
+    
+    
+    return 0;
+}
