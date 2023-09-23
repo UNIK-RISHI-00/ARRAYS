@@ -1,0 +1,41 @@
+//LINEAR SEARCH
+
+#include<stdio.h>
+int main()
+{
+    int Arr[30];
+    int size;
+    printf("ENTER THE SIZE OF ARRAY: ");
+    scanf("%d,",&size);
+    for(int i=0;i<size;i++)
+    {
+        printf("ELEMENT AT INDEX %d :",i);
+        scanf("%d",&Arr[i]);
+    }
+    printf("\n");
+    printf("DISPLAYING ARRAYS ELEMENT");
+    printf("\n");
+    printf("\n");
+    for(int i=0;i<size;i++)
+    {
+        printf("ELEMENT AT INDEX %d : %d \n",i,Arr[i]);      
+    }
+
+    int key;
+    printf("ENTER THE ELEMENT YOU WANT TO SEARCH: ");
+    scanf("%d",&key);
+    //for searching
+    int check=0;
+    for(int i=0;i<size;i++){
+        if(key==Arr[i]){
+            printf("%d found at index %d ",key,i);
+            check=1;
+            break;
+        }
+    }
+    if(check==0){
+        printf("%d is not found in array.",key);
+    }
+    return 0;
+
+}
