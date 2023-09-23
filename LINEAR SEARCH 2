@@ -1,0 +1,55 @@
+#include<stdio.h>
+int findelement(int Arr[],int key,int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        if(key==Arr[i])
+        {
+            return i;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+}
+int main()
+{
+    int Arr[30];
+    int size;
+    printf("ENTER THE SIZE OF ARRAY: ");
+    scanf("%d,",&size);
+    for(int i=0;i<size;i++)
+    {
+        printf("ELEMENT AT INDEX %d :",i);
+        scanf("%d",&Arr[i]);
+    }
+    printf("\n");
+    printf("DISPLAYING ARRAYS ELEMENT");
+    printf("\n");
+    printf("\n");
+    for(int i=0;i<size;i++)
+    {
+        printf("ELEMENT AT INDEX %d : %d \n",i,Arr[i]);      
+    }
+
+    int key;
+    printf("ENTER THE ELEMENTS YOU WANT TO SEARCH: ");
+    scanf("%d",&key);
+
+    int n=sizeof(Arr)/sizeof(Arr[0]);
+
+    int position=findelement(Arr,key,n);
+
+    if(position==-1)
+    {
+        printf("ELEMENTS NOT FOUND");
+    }
+    else
+    {
+        printf("ELEMENTS FOUND AT INDEX %d AND  POSITION: %d", position, position+1);
+    }
+
+    return 0;
+}
